@@ -7,7 +7,7 @@ static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const Bool viewontag         = True;     /* Switch view on tag switch */
-static const char *fonts[]          = { "Roboto-Medium:10", "MaterialDesignIcons:11", "FontAwesome:8" };
+static const char *fonts[]          = { "Roboto-Medium:8", "MaterialDesignIcons:12", "FontAwesome:8" };
 static const char dmenufont[]       = "monospace:size=10";
 static char normbgcolor[]           = "#222222";
 static char normbordercolor[]       = "#444444";
@@ -15,23 +15,23 @@ static char normfgcolor[]           = "#bbbbbb";
 static char selfgcolor[]            = "#eeeeee";
 static char selbordercolor[]        = "#005577";
 static char selbgcolor[]            = "#005577";
-static char termcol0[] = "#000000"; /* black   */
-static char termcol1[] = "#ff0000"; /* red     */
-static char termcol2[] = "#33ff00"; /* green   */
-static char termcol3[] = "#ff0099"; /* yellow  */
-static char termcol4[] = "#0066ff"; /* blue    */
-static char termcol5[] = "#cc00ff"; /* magenta */
-static char termcol6[] = "#00ffff"; /* cyan    */
-static char termcol7[] = "#d0d0d0"; /* white   */
-static char termcol8[]  = "#808080"; /* black   */
-static char termcol9[]  = "#ff0000"; /* red     */
-static char termcol10[] = "#33ff00"; /* green   */
-static char termcol11[] = "#ff0099"; /* yellow  */
-static char termcol12[] = "#0066ff"; /* blue    */
-static char termcol13[] = "#cc00ff"; /* magenta */
-static char termcol14[] = "#00ffff"; /* cyan    */
-static char termcol15[] = "#ffffff"; /* white   */
-static char *termcolor[] = {
+static char termcol0[] 				= "#000000"; /* black   */
+static char termcol1[] 				= "#ff0000"; /* red     */
+static char termcol2[] 				= "#33ff00"; /* green   */
+static char termcol3[] 				= "#ff0099"; /* yellow  */
+static char termcol4[] 				= "#0066ff"; /* blue    */
+static char termcol5[] 				= "#cc00ff"; /* magenta */
+static char termcol6[] 				= "#00ffff"; /* cyan    */
+static char termcol7[] 				= "#d0d0d0"; /* white   */
+static char termcol8[]  			= "#808080"; /* black   */
+static char termcol9[]  			= "#ff0000"; /* red     */
+static char termcol10[] 			= "#33ff00"; /* green   */
+static char termcol11[] 			= "#ff0099"; /* yellow  */
+static char termcol12[] 			= "#0066ff"; /* blue    */
+static char termcol13[] 			= "#cc00ff"; /* magenta */
+static char termcol14[] 			= "#00ffff"; /* cyan    */
+static char termcol15[] 			= "#ffffff"; /* white   */
+static char *termcolor[] 			= {
   termcol0,
   termcol1,
   termcol2,
@@ -64,8 +64,13 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
+	{ "Chromium", NULL,       NULL,       1 << 8,       1,           -1 },
 	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
+	{ "Subl3",    NULL,       NULL,       1 << 2,       0,           -1 },
+	{ "Atom",     NULL,       NULL,       1 << 2,       0,           -1 },
+	{ "Evince",   NULL,       NULL,       1 << 5,       0,           -1 },
+	{ "Thunar",   NULL,       NULL,       1 << 4,       0,           -1 },
+	{ "vlc",      NULL,       NULL,       1 << 6,       0,           -1 },
 };
 
 /* layout(s) */
