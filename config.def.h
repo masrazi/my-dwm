@@ -7,7 +7,7 @@ static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const Bool viewontag         = True;     /* Switch view on tag switch */
-static const char *fonts[]          = { "Roboto:Medium:size=9", "MaterialDesignIcons:8", "FontAwesome:8" };
+static const char *fonts[]          = { "SF Pro Display:Medium:size=9", "MaterialDesignIcons:9", "FontAwesome:8" };
 static const char dmenufont[]       = "monospace:size=10";
 static char normbgcolor[]           = "#222222";
 static char normbordercolor[]       = "#444444";
@@ -63,14 +63,14 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Chromium", NULL,       NULL,       1 << 8,       1,           -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
-	{ "Subl3",    NULL,       NULL,       1 << 2,       0,           -1 },
-	{ "Atom",     NULL,       NULL,       1 << 2,       0,           -1 },
-	{ "Evince",   NULL,       NULL,       1 << 5,       0,           -1 },
-	{ "Thunar",   NULL,       NULL,       1 << 4,       0,           -1 },
-	{ "vlc",      NULL,       NULL,       1 << 6,       0,           -1 },
+	/* class      instance    title       tags mask     switchtotag	    isfloating   monitor */
+	{ "Chromium", NULL,       NULL,       1 << 8,       	1,				1,           -1 },
+	{ "Firefox",  NULL,       NULL,       1 << 8,       	1,           	0,			 -1 },
+	{ "Subl3",    NULL,       NULL,       1 << 2,       	1,           	0,			 -1 },
+	{ "Atom",     NULL,       NULL,       1 << 2,       	1,           	0,			 -1 },
+	{ "Evince",   NULL,       NULL,       1 << 5,       	1,           	0,			 -1 },
+	{ "Thunar",   NULL,       NULL,       1 << 4,       	1,           	0,			 -1 },
+	{ "vlc",      NULL,       NULL,       1 << 6,       	1,           	0,			 -1 },
 };
 
 /* layout(s) */
@@ -80,7 +80,7 @@ static const int resizehints = 1;    /* 1 means respect size hints in tiled resi
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "[]=",      tile },    /* first entry is default */
+	{ "[ ]=",      tile },    /* first entry is default */
 	{ "><>",      NULL },    /* no layout function means floating behavior */
 	{ "[M]",      monocle },
 };
