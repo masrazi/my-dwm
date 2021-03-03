@@ -7,7 +7,7 @@ static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const Bool viewontag         = True;     /* Switch view on tag switch */
-static const char *fonts[]          = { "Roboto-Medium:8", "MaterialDesignIcons:12", "FontAwesome:8" };
+static const char *fonts[]          = { "Roboto:Medium:size=9", "MaterialDesignIcons:8", "FontAwesome:8" };
 static const char dmenufont[]       = "monospace:size=10";
 static char normbgcolor[]           = "#222222";
 static char normbordercolor[]       = "#444444";
