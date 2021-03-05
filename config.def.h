@@ -2,15 +2,15 @@
 
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
-static const unsigned int gappx     = 5;        /* gaps between windows */
+static const unsigned int gappx     = 3;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const Bool viewontag         = True;     /* Switch view on tag switch */
 static const char *fonts[]          = { "Droid Sans Mono:size=9", "MaterialDesignIcons:9" };
 static const char dmenufont[]       = "monospace:size=10";
-static char normbgcolor[]           = "#222222";
-static char normbordercolor[]       = "#444444";
+static char normbgcolor[]           = "#005577";
+static char normbordercolor[]       = "#005577";
 static char normfgcolor[]           = "#bbbbbb";
 static char selfgcolor[]            = "#eeeeee";
 static char selbordercolor[]        = "#005577";
@@ -64,11 +64,11 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class      		instance    title       tags mask     switchtotag	    isfloating   monitor */
-	{ "Chromium", 		NULL,       NULL,       1 << 1,       	1,				0,           -1 },
-	{ "Firefox",  		NULL,       NULL,       1 << 1,       	1,           	0,			 -1 },
-	{ "Subl3",   		NULL,       NULL,       1 << 2,       	1,           	0,			 -1 },
-	{ "Atom",     		NULL,       NULL,       1 << 2,       	1,           	0,			 -1 },
-	{ "Evince",   		NULL,       NULL,       1 << 5,       	1,           	0,			 -1 },
+	{ "Brave-browser", 	NULL,       NULL,       1 << 1,       	1,				0,           -1 },
+	{ "firefox",  		NULL,       NULL,       1 << 1,       	1,           	0,			 -1 },
+	{ "Subl",   		NULL,       NULL,       1 << 2,       	1,           	0,			 -1 },
+	{ "Code",     		NULL,       NULL,       1 << 2,       	1,           	0,			 -1 },
+	{ "Xreader",   		NULL,       NULL,       1 << 5,       	1,           	0,			 -1 },
 	{ "Thunar",   		NULL,       NULL,       1 << 4,       	1,           	0,			 -1 },
 	{ "vlc",      		NULL,       NULL,       1 << 6,       	1,           	0,			 -1 },
 };
@@ -126,8 +126,8 @@ static Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
-	{ MODKEY,                       XK_Left,   viewtoleft,     {0} },
-	{ MODKEY,                       XK_Right,  viewtoright,    {0} },
+	{ MODKEY,                XK_bracketleft,   viewtoleft,     {0} },
+	{ MODKEY,                XK_bracketright,  viewtoright,    {0} },
 	{ MODKEY|ShiftMask,             XK_Left,   tagtoleft,      {0} },
 	{ MODKEY|ShiftMask,             XK_Right,  tagtoright,     {0} },
 	{ MODKEY,                       XK_minus,  setgaps,        {.i = -1 } },
