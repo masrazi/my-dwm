@@ -7,11 +7,11 @@ static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const Bool viewontag         = True;     /* Switch view on tag switch */
-static const char *fonts[]          = { "Droid Sans Mono:size=9", "MaterialDesignIcons:9" };
+static const char *fonts[]          = { "Fira Code Retina:size=10", "MaterialDesignIcons:9" };
 static const char dmenufont[]       = "monospace:size=10";
 static char normbgcolor[]           = "#005577";
 static char normbordercolor[]       = "#005577";
-static char normfgcolor[]           = "#bbbbbb";
+static char normfgcolor[]           = "#00a2ff";
 static char selfgcolor[]            = "#eeeeee";
 static char selbordercolor[]        = "#005577";
 static char selbgcolor[]            = "#005577";
@@ -56,7 +56,7 @@ static char *colors[][3] = {
 };
 
 /* tagging */
-static const char *tags[] = { "󰆍", "󰊯", "󰨞", "󰒓", "󰝰", "󰾳", "󰕼", "󰝚", "󰍹" };
+static const char *tags[] = { "󰆍", "󰈹", "󰨞", "󰒓", "󰝰", "󰈦", "󰑈", "󱇣", "󰍹" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -71,6 +71,8 @@ static const Rule rules[] = {
 	{ "Xreader",   		NULL,       NULL,       1 << 5,       	1,           	0,			 -1 },
 	{ "Thunar",   		NULL,       NULL,       1 << 4,       	1,           	0,			 -1 },
 	{ "vlc",      		NULL,       NULL,       1 << 6,       	1,           	0,			 -1 },
+	{ "Inkscape",      	NULL,       NULL,       1 << 7,       	1,           	0,			 -1 },
+	{ "Gimp",      	    NULL,       NULL,       1 << 7,       	1,           	0,			 -1 },
 };
 
 /* layout(s) */
@@ -80,9 +82,9 @@ static const int resizehints = 1;    /* 1 means respect size hints in tiled resi
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "[ ]=",      tile },    /* first entry is default */
-	{ "><>",      NULL },    /* no layout function means floating behavior */
-	{ "[M]",      monocle },
+	{ "󰙀",      tile },    /* first entry is default */
+	{ "󰀽",      NULL },    /* no layout function means floating behavior */
+	{ "󰘔",      monocle },
 };
 
 /* key definitions */
@@ -113,7 +115,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
 	{ MODKEY,                       XK_Return, zoom,           {0} },
-	{ MODKEY,                       XK_Tab,    view,           {0} },
+	{ MODKEY,                       XK_v,      view,           {0} },
 	{ MODKEY,             			XK_x,      killclient,     {0} },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
